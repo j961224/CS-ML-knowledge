@@ -1,6 +1,7 @@
 # 0. DateTime 사용
 
-- Datatime 형태로 바꾸기
+
+## Datatime 형태로 바꾸기
 : 데이터가 str이나 int로 되어 있는 경우 pandas의 to_datetime을 이용해 column 전체를 datetime으로 만들 수 있다.
 
 (추가로 sort_values(by=컬럼명,ascending=[True:오름차순, False=내림차순])으로 가능하다.)
@@ -32,7 +33,7 @@ ID	timestamp	duration(m)
 ~~~
 
 
-- Datetime의 시간들끼리 차수 구하기
+## Datetime의 시간들끼리 차수 구하기
 : datetime type으로 되어 있는 것끼리 빼면 두 시간의 차이를 구할 수 있다. 지목하고 있는 index가 0이라면 shift()명령어로 index 1을 가져올 수 있다.
 
 (추가로 astype('timedelta64[h]')로 뺀 시간을 분 단위로 표현할 수 있다.)
