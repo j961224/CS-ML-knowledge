@@ -39,14 +39,14 @@ ID	timestamp	duration(m)
 (추가로 astype('timedelta64[h]')로 뺀 시간을 분 단위로 표현할 수 있다.)
 
 ~~~
-df1["duration(m)"]=(df1.timestamp-df1.timestamp.shift()).astype('timedelta64[h]').fillna(0)
+df1["duration(m)"]=(df1.timestamp-df1.timestamp.shift()).astype('timedelta64[m]').fillna(0)
 print(df1)
 
             timestamp  duration(m)
 0 2014-03-13 01:30:00          0.0
-1 2014-03-30 15:30:00        422.0
-2 2014-04-13 12:30:00        333.0
-3 2014-04-15 14:30:00         50.0
-4 2014-04-16 11:37:00         21.0
-5 2014-05-01 12:00:00        360.0
+1 2014-03-30 15:30:00      25320.0
+2 2014-04-13 12:30:00      19980.0
+3 2014-04-15 14:30:00       3000.0
+4 2014-04-16 11:37:00       1267.0
+5 2014-05-01 12:00:00      21623.0
 ~~~
